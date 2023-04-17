@@ -1,0 +1,6 @@
+local/
+venv/
+.python-version
+.idea/
+/code/tests/.pytest_cache/
+/code/.pytest_cache/
