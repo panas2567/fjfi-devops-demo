@@ -24,6 +24,10 @@ Steps to download the repo and set up the environment using command line (Powers
   - Clone the repo:
     - git clone https://github.com/panas2567/fjfi-devops-demo.git
 
+- Simple env setup:
+  - `python3 -m venv venv`
+  - `source ./venv/bin/activate`
+  - `pip3 install pytest==7.3.1`
 
 - Perform changes to the code:
   - Navigate to the project directory:
