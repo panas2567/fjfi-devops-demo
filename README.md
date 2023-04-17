@@ -1,3 +1,4 @@
+[![Continuous integration pipeline](https://github.com/panas2567/fjfi-devops-demo/actions/workflows/ci-tests.yaml/badge.svg?branch=main)](https://github.com/panas2567/fjfi-devops-demo/actions/workflows/ci-tests.yaml)
 # fjfi-devops-demo
 Demonstration of the CI/CD routine
 
@@ -5,7 +6,7 @@ Steps to download the repo and set up the environment using command line (Powers
 
 - Prerequisite: Python 3 installed.
   - Check which version is installed (if any at all): `python --version` or `python3 --version`.
-  - If not, install Python 3.10, e.g. with `conda`, `pyenv` or a package manager.
+  - If not, install Python 3.9, e.g. with `conda`, `pyenv` or a package manager.
     - Mac: https://docs.python-guide.org/starting/install3/osx/
     - Win: https://www.simplilearn.com/tutorials/python-tutorial/python-installation-on-windows
   - Make sure the Python binary is on PATH.
@@ -40,8 +41,8 @@ Steps to download the repo and set up the environment using command line (Powers
 
     
 ## Optional - setup virtual environment:
-  - `pyenv install 3.10` 
-  - `pyenv local 3.10`
+  - `pyenv install 3.9` 
+  - `pyenv local 3.9`
     - Check with `python3 --version`, if it's not the `3.10`, then
       - on Mac run: `eval "$(pyenv init --path)"`
       - on Windows move the correct version to the top of the PATH environment variable.
