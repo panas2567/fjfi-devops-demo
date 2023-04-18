@@ -11,8 +11,9 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     """
     if a == 0:
         return None
-    result = []
     D = b * b - 4 * a * c
-    result.append((-b + sqrt(D)) / (2 * a))
-    result.append((-b - sqrt(D)) / (2 * a))
-    return result
+    if D < 0:
+        return None
+    x1 = (-b + sqrt(D)) / (2 * a)
+    x2 = (-b - sqrt(D)) / (2 * a)
+    return (x1, x2)
