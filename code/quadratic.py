@@ -1,3 +1,4 @@
+"""kjbjhjh"""
 from typing import Optional
 from math import sqrt
 
@@ -16,6 +17,7 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     D = b * b - 4 * a * c
     if D < 0:
         return None
+
     x1 = (-b + sqrt(D)) / (2 * a)
     x2 = (-b - sqrt(D)) / (2 * a)
     return (x1, x2)
