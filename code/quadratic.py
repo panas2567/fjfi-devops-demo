@@ -1,8 +1,10 @@
+""" Sample documenting comment """
+
 from typing import Optional
 from numpy import sqrt, isreal
 
-# pylint: disable=invalid-name
 
+# pylint: disable=invalid-name
 
 def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     """This function should return a tuple (x1,x2) with the computed roots of a quadratic equation, given its
@@ -12,7 +14,7 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     if a == 0:
         print("For a = 0 the equation is not considered as quadratic. Abort.")
         return None
-    discriminant: float = b**2 - 4 * a * c
+    discriminant: float = b ** 2 - 4 * a * c
     if discriminant < 0:
         return None
     root1: float = (-b - sqrt(discriminant)) / (2 * a)
@@ -20,5 +22,4 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     if isreal(root1) & isreal(root2):
         roots = (root1, root2)
         return roots
-    else:
-        return None
+    return None
