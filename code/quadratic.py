@@ -12,8 +12,11 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     if a == 0:
         print("For a = 0 the equation is not considered as quadratic. Abort.")
         return None
-    root1: float = (-b - sqrt(b**2 - 4 * a * c)) / (2 * a)
-    root2: float = (-b + sqrt(b**2 - 4 * a * c)) / (2 * a)
+    discriminant: float = b**2 - 4 * a * c
+    if discriminant < 0:
+        return None
+    root1: float = (-b - sqrt(discriminant)) / (2 * a)
+    root2: float = (-b + sqrt(discriminant)) / (2 * a)
     if isreal(root1) & isreal(root2):
         roots = (root1, root2)
         return roots
