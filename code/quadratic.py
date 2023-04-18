@@ -2,8 +2,6 @@
 from typing import Optional
 
 
-# pylint: disable=invalid-name
-
 def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     """Function founds roots """
     if a == 0:
