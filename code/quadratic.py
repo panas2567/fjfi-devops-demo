@@ -4,8 +4,8 @@ from typing import Optional
 
 # pylint: disable=invalid-name
 
-"""Function founds roots """
 def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
+    """Function founds roots """
     if a == 0:
         return None
     d = b * b - 4 * a * c
