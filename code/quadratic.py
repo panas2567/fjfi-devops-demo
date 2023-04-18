@@ -1,4 +1,4 @@
-# Added implementation
+"""Module docstring"""
 from typing import Optional
 
 
