@@ -1,4 +1,22 @@
 [![Continuous integration pipeline](https://github.com/panas2567/fjfi-devops-demo/actions/workflows/ci-tests.yaml/badge.svg?branch=main)](https://github.com/panas2567/fjfi-devops-demo/actions/workflows/ci-tests.yaml)
+# Contribution guideline
+To start contributing on this repository, create new branch locally based on the `main` branch.
+The new branch's name should be in the following format:
+- `feature/<initials>/fix-unit-tests-evaluate`
+
+After making your changes, push them to remote:
+- `git add .` (from project's root),
+- `git commit -m "<commit message>"`
+- `git push`
+
+Once the remote branch is created, create a `pull request` to apply the changes to the `main` branch.
+
+`Main` branch is protected and each PR needs at least one approval from the reviewers in order to be merged.
+
+Try to use `semantic commits` convention. For reference check: https://gist.github.com/joshbuchea/6f47e86d2510bce28f8e7f42ae84c716
+
+
+
 # fjfi-devops-demo
 Demonstration of the CI/CD routine
 
