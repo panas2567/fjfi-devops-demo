@@ -13,8 +13,8 @@ class Symbol(Enum):
     SPOCK = "spock"
 
 
-# Dictionary, where key in a Symbol and value is a list of Symbols that loose the key Symbol.
-loosers_to = {
+# Dictionary, where the value is a list of Symbols that the key Symbol beats.
+winning_strategies = {
     Symbol.ROCK: [Symbol.SCISSORS, Symbol.LIZARD],
     Symbol.PAPER: [Symbol.ROCK, Symbol.SPOCK],
     Symbol.SCISSORS: [Symbol.PAPER, Symbol.LIZARD],
@@ -48,7 +48,7 @@ def get_winner(symbol1: Symbol, symbol2: Symbol) -> Union[None, Symbol]:
     """
     if symbol1 == symbol2:
         return None
-    if symbol2 in loosers_to[symbol1]:
+    if symbol2 in winning_strategies[symbol1]:
         return symbol1
     else:
         return symbol2

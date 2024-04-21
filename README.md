@@ -6,7 +6,7 @@ Steps to download the repo and set up the environment using command line (Powers
 
 - Prerequisite: Python 3 installed.
   - Check which version is installed (if any at all): `python --version` or `python3 --version`.
-  - If not, install Python 3.9, e.g. with `conda`, `pyenv` or a package manager.
+  - If not, install Python 3.12, e.g. with `conda`, `pyenv` or a package manager.
     - Mac: https://docs.python-guide.org/starting/install3/osx/
     - Win: https://www.simplilearn.com/tutorials/python-tutorial/python-installation-on-windows
   - Make sure the Python binary is on PATH.
@@ -41,15 +41,15 @@ Steps to download the repo and set up the environment using command line (Powers
 
     
 ## Optional - setup virtual environment:
-  - `pyenv install 3.9` 
-  - `pyenv local 3.9`
-    - Check with `python3 --version`, if it's not the `3.10`, then
+  - `pyenv install 3.12` 
+  - `pyenv local 3.12`
+    - Check with `python3 --version`, if it's not the `3.12`, then
       - on Mac run: `eval "$(pyenv init --path)"`
       - on Windows move the correct version to the top of the PATH environment variable.
         - Restart the command line.
-  - `python3 -m venv local/.venv-dev`
+  - `python3 -m venv .venv-dev`
   - Activate the `.venv-dev`:
-    - Mac: `source local/.venv-dev/bin/activate`
-    - Win: `. .\local\.venv-dev\bin\activate`
+    - Mac: `source .venv-dev/bin/activate`
+    - Win: `. .\.venv-dev\bin\activate`
   - `pip3 install -r requirements.txt`
   - Check the correct installation in the venv with `pip freeze --local`.
