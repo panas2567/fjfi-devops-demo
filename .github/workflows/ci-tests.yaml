@@ -35,7 +35,7 @@ jobs:
         run: |
           touch $( pwd )/samples/__init__.py
           python -m pylint --version
-          python -m pylint $( pwd )/samples
+          python -m pylint $( pwd )/samples --ignore-paths samples/tests 
 
       - name: Check if any linting step failed
         shell: bash

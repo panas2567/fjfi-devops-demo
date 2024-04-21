@@ -6,6 +6,7 @@ from typing import Union
 
 class Symbol(Enum):
     """Symbol represents one of the allowed values in the Rock-Paper-Scissors-Lizard-Spock game."""
+
     ROCK = "rock"
     PAPER = "paper"
     SCISSORS = "scissors"
@@ -24,8 +25,8 @@ winning_strategies = {
 
 
 def get_winner(symbol1: Symbol, symbol2: Symbol) -> Union[None, Symbol]:
-    """This function evaluates winner of the two given symbols. In case the symbols are the same, None should be
-    returned.
+    """This function evaluates winner of the two given symbols.
+    In case the symbols are the same, None should be returned.
 
     The rules are based on the following matrix:
     ╔══════════╦══════╦═══════╦══════════╦════════╦═══════╗
@@ -50,5 +51,4 @@ def get_winner(symbol1: Symbol, symbol2: Symbol) -> Union[None, Symbol]:
         return None
     if symbol2 in winning_strategies[symbol1]:
         return symbol1
-    else:
-        return symbol2
+    return symbol2
