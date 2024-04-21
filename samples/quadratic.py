@@ -1,4 +1,4 @@
-""" Sample documenting comment """
+"""Implementation of a function finding real roots of a quadratic equation."""
 
 from typing import Optional
 from numpy import sqrt, isreal
