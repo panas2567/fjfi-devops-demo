@@ -49,6 +49,13 @@ def get_winner(symbol1: Symbol, symbol2: Symbol) -> Optional[Symbol]:
     """
     if symbol1 == symbol2:
         return None
-    if symbol2 in winning_strategies[symbol1]:
+    elif (
+        (symbol1 == Symbol.ROCK and symbol2 in [Symbol.SCISSORS, Symbol.LIZARD])
+        or (symbol1 == Symbol.PAPER and symbol2 in [Symbol.ROCK, Symbol.SPOCK])
+        or (symbol1 == Symbol.SCISSORS and symbol2 in [Symbol.PAPER, Symbol.LIZARD])
+        or (symbol1 == Symbol.LIZARD and symbol2 in [Symbol.PAPER, Symbol.SPOCK])
+        or (symbol1 == Symbol.SPOCK and symbol2 in [Symbol.ROCK, Symbol.SCISSORS])
+    ):
         return symbol1
-    return symbol2
+    else:
+        return symbol2
