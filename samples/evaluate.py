@@ -18,9 +18,9 @@ class Symbol(Enum):
 winning_strategies = {
     Symbol.ROCK: [Symbol.SCISSORS, Symbol.LIZARD],
     Symbol.PAPER: [Symbol.ROCK, Symbol.SPOCK],
-    Symbol.SCISSORS: [Symbol.PAPER, Symbol.SPOCK],
+    Symbol.SCISSORS: [Symbol.PAPER, Symbol.LIZARD],
     Symbol.LIZARD: [Symbol.PAPER, Symbol.SPOCK],
-    Symbol.SPOCK: [Symbol.SCISSORS, Symbol.LIZARD],
+    Symbol.SPOCK: [Symbol.ROCK, Symbol.SCISSORS],
 }
 
 
@@ -49,13 +49,6 @@ def get_winner(symbol1: Symbol, symbol2: Symbol) -> Optional[Symbol]:
     """
     if symbol1 == symbol2:
         return None
-    elif (
-        (symbol1 == Symbol.ROCK and symbol2 in [Symbol.SCISSORS, Symbol.LIZARD])
-        or (symbol1 == Symbol.PAPER and symbol2 in [Symbol.ROCK, Symbol.SPOCK])
-        or (symbol1 == Symbol.SCISSORS and symbol2 in [Symbol.PAPER, Symbol.LIZARD])
-        or (symbol1 == Symbol.LIZARD and symbol2 in [Symbol.PAPER, Symbol.SPOCK])
-        or (symbol1 == Symbol.SPOCK and symbol2 in [Symbol.ROCK, Symbol.SCISSORS])
-    ):
+    if symbol2 in winning_strategies[symbol1]:
         return symbol1
-    else:
-        return symbol2
+    return symbol2
