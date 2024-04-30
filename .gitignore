@@ -4,3 +4,5 @@ local/
 .idea/
 /samples/tests/.pytest_cache/
 /samples/.pytest_cache/
+/samples/__pycache__/
+/samples/tests/__pycache__/
