@@ -1,7 +1,5 @@
 import pytest
 
-# pylint: disable=
-
 
 @pytest.mark.parametrize(
     "a, b, c, expected_output",
