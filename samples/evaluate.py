@@ -17,7 +17,7 @@ class Symbol(Enum):
 # Dictionary, where the value is a list of Symbols that are beaten by the key Symbol.
 winning_strategies = {
     Symbol.ROCK: [Symbol.SCISSORS, Symbol.LIZARD],
-    Symbol.PAPER: [Symbol.ROCK, Symbol.SCISSORS],
+    Symbol.PAPER: [Symbol.ROCK, Symbol.SPOCK],
     Symbol.SCISSORS: [Symbol.PAPER, Symbol.LIZARD],
     Symbol.LIZARD: [Symbol.PAPER, Symbol.SPOCK],
     Symbol.SPOCK: [Symbol.ROCK, Symbol.SCISSORS],
