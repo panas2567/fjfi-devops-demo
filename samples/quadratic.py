@@ -18,8 +18,8 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     if a == 0:
         return None
 
-    D = b*b - 4*a*c
+    D = b * b - 4 * a * c
     if D < 0:
         return None
 
-    return ((-b - sqrt(D)) / (2*a), (-b + sqrt(D)) / (2*a))
+    return ((-b - sqrt(D)) / (2 * a), (-b + sqrt(D)) / (2 * a))
