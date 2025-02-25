@@ -1,7 +1,7 @@
 """Implementation of a function finding real roots of a quadratic equation."""
 
+from math import sqrt
 from typing import Optional
-from numpy import sqrt, isreal
 
 
 # pylint: disable=invalid-name
@@ -15,4 +15,11 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     - The case where a = 0, should be prompted as invalid quadratic equation
     and return None.
     """
-    pass
+    if a == 0:
+        return None
+
+    D = b * b - 4 * a * c
+    if D < 0:
+        return None
+
+    return ((-b - sqrt(D)) / (2 * a), (-b + sqrt(D)) / (2 * a))
