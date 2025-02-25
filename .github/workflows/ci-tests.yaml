@@ -33,9 +33,9 @@ jobs:
         shell: bash
         id: pylint
         run: |
-          touch $( pwd )/code/__init__.py
+          touch $( pwd )/samples/__init__.py
           python -m pylint --version
-          python -m pylint $( pwd )/code
+          python -m pylint $( pwd )/samples --ignore-paths samples/tests 
 
       - name: Check if any linting step failed
         shell: bash
@@ -66,4 +66,4 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; else pip install pytest==7.3.1 ; fi
       - name: Test with pytest
         run: |
-          python -m pytest ./code
+          python -m pytest ./samples

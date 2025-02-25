@@ -1,11 +1,12 @@
 """This module implements evaluation method for Rock-Paper-Scissors-Lizard-Spock game."""
 
 from enum import Enum
-from typing import Union
+from typing import Optional
 
 
 class Symbol(Enum):
     """Symbol represents one of the allowed values in the Rock-Paper-Scissors-Lizard-Spock game."""
+
     ROCK = "rock"
     PAPER = "paper"
     SCISSORS = "scissors"
@@ -13,19 +14,19 @@ class Symbol(Enum):
     SPOCK = "spock"
 
 
-# Dictionary, where the value is a list of Symbols that the key Symbol beats.
+# Dictionary, where the value is a list of Symbols that are beaten by the key Symbol.
 winning_strategies = {
     Symbol.ROCK: [Symbol.SCISSORS, Symbol.LIZARD],
     Symbol.PAPER: [Symbol.ROCK, Symbol.SPOCK],
     Symbol.SCISSORS: [Symbol.PAPER, Symbol.LIZARD],
-    Symbol.LIZARD: [Symbol.PAPER, Symbol.SPOCK],
-    Symbol.SPOCK: [Symbol.SCISSORS, Symbol.ROCK],
+    Symbol.LIZARD: [Symbol.PAPER, Symbol.SCISSORS],
+    Symbol.SPOCK: [Symbol.ROCK, Symbol.SCISSORS],
 }
 
 
-def get_winner(symbol1: Symbol, symbol2: Symbol) -> Union[None, Symbol]:
-    """This function evaluates winner of the two given symbols. In case the symbols are the same, None should be
-    returned.
+def get_winner(symbol1: Symbol, symbol2: Symbol) -> Optional[Symbol]:
+    """This function evaluates winner of the two given symbols.
+    In case the symbols are the same, None should be returned.
 
     The rules are based on the following matrix:
     ╔══════════╦══════╦═══════╦══════════╦════════╦═══════╗
@@ -50,5 +51,4 @@ def get_winner(symbol1: Symbol, symbol2: Symbol) -> Union[None, Symbol]:
         return None
     if symbol2 in winning_strategies[symbol1]:
         return symbol1
-    else:
-        return symbol2
+    return symbol2
