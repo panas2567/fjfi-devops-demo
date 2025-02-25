@@ -15,4 +15,10 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     - The case where a = 0, should be prompted as invalid quadratic equation
     and return None.
     """
+    if a == 0:
+        return None
+    discriminant = b*b-4*a*c
+    if discriminant < 0:
+        return None
+    return ((-b-sqrt(discriminant))/2/a,(-b+sqrt(discriminant))/2/a)
     pass
