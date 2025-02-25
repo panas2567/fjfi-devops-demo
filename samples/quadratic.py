@@ -1,7 +1,7 @@
 """Implementation of a function finding real roots of a quadratic equation."""
 
+from math import sqrt
 from typing import Optional
-from numpy import sqrt, isreal
 
 
 # pylint: disable=invalid-name
