@@ -1,4 +1,5 @@
 local/
+.venv/
 .venv-dev/
 .python-version
 .idea/

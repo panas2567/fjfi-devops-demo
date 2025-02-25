@@ -15,4 +15,19 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
     - The case where a = 0, should be prompted as invalid quadratic equation
     and return None.
     """
-    pass
+    if a == 0:
+        return None
+
+    determinant: float = b * b - 4 * a * c
+
+    if determinant < 0:
+        return None
+
+    if determinant == 0:
+        print(-b / (2 * a))
+        return (-b / (2 * a), -b / (2 * a))
+
+    negative_root: float = (-b - sqrt(determinant)) / (2 * a)
+    positive_root: float = (-b + sqrt(determinant)) / (2 * a)
+
+    return (negative_root, positive_root)
