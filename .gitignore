@@ -8,4 +8,3 @@ __pycache__/
 stored/
 samples/tests/__pycache__/
 samples/__pycache__/
-uv.lock
