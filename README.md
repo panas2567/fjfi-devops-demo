@@ -71,14 +71,13 @@ Steps to download the repo and set up the environment using command line (Powers
   - Mac: `source .venv/bin/activate`
   - Win: `.\.venv\Scripts\activate`
 
-**With pip + pyenv:**
+## Fixing ruff warning
 
-- `pyenv install 3.12`
-- `pyenv local 3.12`
-  - Check with `python3 --version`; if it's not 3.12, on Mac run `eval "$(pyenv init --path)"` or adjust PATH on Windows and restart the shell.
-- `python3 -m venv .venv-dev`
-- Activate the `.venv-dev`:
-  - Mac: `source .venv-dev/bin/activate`
-  - Win: `. .\.venv-dev\bin\activate`
-- `pip3 install -r requirements.txt`
-- Check the installation with `pip freeze --local`.
+Commands to fix different linting errors.
+
+- formatting errors:
+  - `uv run ruff format .`
+- other linting errors:
+  - `uv run ruff --check . --fix`
+- isort (import) errors:
+  - `ruff check --select I --fix .`
