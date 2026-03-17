@@ -13,7 +13,7 @@ def shift_text(text: str, shift: int) -> str:
     for char in text:
         if char.isalpha():
             base = ord("A") if char.isupper() else ord("a")
-            shifted = (ord(char) - base + shift) % 26 
+            shifted = (ord(char) - base + shift) % 26
             result.append(chr(base + shifted))
         else:
             result.append(char)
