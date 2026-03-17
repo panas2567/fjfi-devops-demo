@@ -1,5 +1,6 @@
 import pytest
-from evaluate import Symbol
+
+from samples.evaluate import Symbol
 
 
 @pytest.mark.parametrize(
@@ -23,6 +24,6 @@ from evaluate import Symbol
     ],
 )
 def test_get_winner(symbol1: Symbol, symbol2: Symbol, expected_output):
-    from evaluate import get_winner
+    from samples.evaluate import get_winner
 
     assert get_winner(symbol1, symbol2) == expected_output

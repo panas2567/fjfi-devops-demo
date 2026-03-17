@@ -12,6 +12,6 @@ import pytest
     ],
 )
 def test_find_roots(a: int, b: int, c: int, expected_output):
-    from quadratic import find_roots
+    from samples.quadratic import find_roots
 
     assert find_roots(a, b, c) == expected_output
