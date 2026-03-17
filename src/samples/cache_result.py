@@ -20,7 +20,7 @@ def cache_result(func: Callable) -> Callable:
 
     @functools.wraps(func)
     def wrapper(*args: Any) -> Any:
-        if args[0] not in cache:
+        if args not in cache:
             cache[args] = func(*args)
         return cache[args]
 

@@ -21,7 +21,7 @@ from samples.evaluate import Symbol
         (Symbol.SCISSORS, Symbol.SCISSORS, None),
         (Symbol.LIZARD, Symbol.LIZARD, None),
         (Symbol.SPOCK, Symbol.SPOCK, None),
-    ]
+    ],
 )
 def test_get_winner(symbol1: Symbol, symbol2: Symbol, expected_output):
     from samples.evaluate import get_winner

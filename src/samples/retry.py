@@ -27,7 +27,6 @@ def retry(max_attempts: int) -> Callable:
                     return func(*args, **kwargs)
                 except Exception as exc:
                     last_exception = exc
-                    break
             raise last_exception  # type: ignore[misc]
 
         return wrapper
