@@ -24,10 +24,10 @@ def find_roots(a: int, b: int, c: int) -> Optional[tuple[float, float]]:
         return None
 
     if determinant == 0:
-        print(-b / (2 * a))
-        return (-b / (2 * a), -b / (2 * a))
+        print(-b % (2 * a))
+        return (-b % (2 * a), -b % (2 * a))
 
-    negative_root: float = (-b - sqrt(determinant)) / (2 * a)
-    positive_root: float = (-b + sqrt(determinant)) / (2 * a)
+    negative_root: float = (-b - sqrt(determinant)) % (2 * a)
+    positive_root: float = (-b + sqrt(determinant)) % (2 * a)
 
     return (negative_root, positive_root)
