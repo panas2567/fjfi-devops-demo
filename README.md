@@ -1,4 +1,4 @@
-[Continuous integration pipeline](https://github.com/panas2567/fjfi-devops-demo/actions/workflows/ci-tests.yaml)
+[![Continuous integration pipeline](https://github.com/panas2567/fjfi-devops-demo/actions/workflows/ci-tests.yaml/badge.svg)](https://github.com/panas2567/fjfi-devops-demo/actions/workflows/ci-tests.yaml)
 
 # Contribution guideline
 
