@@ -52,3 +52,16 @@ def test_mixed_repeated_calls():
     square(3)
     square(3)
     assert call_count["n"] == 2
+
+
+def test_two_arguments():
+    call_count = {"n": 0}
+
+    @cache_result
+    def add(x, y):
+        call_count["n"] += 1
+        return x + y
+
+    assert add(2, 3) == 5
+    assert add(2, 3) == 5
+    assert call_count["n"] == 1
