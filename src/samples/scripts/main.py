@@ -1,4 +1,5 @@
 from samples.cache_result import cache_result
+from samples.caesar_cipher import shift_text
 from time import sleep
 
 @cache_result
@@ -16,5 +17,11 @@ def cache_example():
 
 if __name__ == "__main__":
 
+    # Cache
     cache_example()
     print(slow_function.cache)
+
+    # Caesar cipher
+    print(shift_text("Hello, World!", 5))
+
+    
