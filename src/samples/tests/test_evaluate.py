@@ -12,16 +12,16 @@ from samples.evaluate import Symbol
         (Symbol.PAPER, Symbol.SPOCK, Symbol.PAPER),
         (Symbol.SCISSORS, Symbol.PAPER, Symbol.SCISSORS),
         (Symbol.SCISSORS, Symbol.LIZARD, Symbol.SCISSORS),
-        (Symbol.LIZARD, Symbol.PAPER, Symbol.ROCK),
+        (Symbol.LIZARD, Symbol.PAPER, Symbol.LIZARD),
         (Symbol.LIZARD, Symbol.SPOCK, Symbol.LIZARD),
         (Symbol.SPOCK, Symbol.ROCK, Symbol.SPOCK),
         (Symbol.SPOCK, Symbol.SCISSORS, Symbol.SPOCK),
-        (Symbol.ROCK, Symbol.ROCK, Symbol.SPOCK),
+        (Symbol.ROCK, Symbol.ROCK, None),
         (Symbol.PAPER, Symbol.PAPER, None),
         (Symbol.SCISSORS, Symbol.SCISSORS, None),
         (Symbol.LIZARD, Symbol.LIZARD, None),
         (Symbol.SPOCK, Symbol.SPOCK, None),
-    ],
+    ]
 )
 def test_get_winner(symbol1: Symbol, symbol2: Symbol, expected_output):
     from samples.evaluate import get_winner
