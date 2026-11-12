@@ -5,6 +5,8 @@
 To start contributing on this repository, create new branch locally based on the `main` branch.
 The new branch's name should be in the following format:
 
+adding new line
+
 - `feature/<initials>/fix-unit-tests-evaluate`
 
 After making your changes, push them to remote:
